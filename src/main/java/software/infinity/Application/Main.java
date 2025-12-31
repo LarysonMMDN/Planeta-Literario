@@ -3,22 +3,41 @@ package software.infinity.Application;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import software.infinity.Entities.Controller.LoginController;
-import software.infinity.Entities.View.LoginView;
-
-import java.io.IOException;
+import software.infinity.Entities.View.View;
 
 public class Main extends Application {
 
+    private static Stage stage;
+
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage primaryStage) throws Exception {
+        stage = primaryStage;
+        primaryStage.setTitle("Planeta Literário");
 
-        LoginView view = new LoginView();
-        LoginController controller = new LoginController(view);
+        Scene cena = View.load("Login.fxml");
+        stage.setResizable(false);
+        primaryStage.setScene(cena);
+        primaryStage.show();
+    }
 
-        Scene scene = new Scene(view.getLoginView());
-        stage.setScene(scene);
-        stage.setTitle("App MVC JavaFX");
+    public static void trocarTela(String fxmlNome) throws Exception {
+        boolean redimencionamento = false;
+        switch (fxmlNome.toLowerCase()) {
+            case "login":
+                fxmlNome = "Login.fxml";
+                break;
+            case "cadastro":
+                fxmlNome = "Cadastro.fxml";
+                break;
+            case "inicial":
+                fxmlNome = "PaginaInicial.fxml";
+                redimencionamento = true;
+                break;
+
+        }
+        Scene cena = View.load(fxmlNome);
+        stage.setResizable(redimencionamento);
+        stage.setScene(cena);
         stage.show();
     }
 

@@ -1,28 +1,37 @@
 package software.infinity.Entities.Controller;
 
-import javafx.scene.Parent;
-import software.infinity.Entities.View.LoginView;
+import javafx.fxml.FXML;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import software.infinity.Application.Main;
 
 public class LoginController {
 
-    private LoginView view;
+    @FXML private TextField txtUsuario;
+    @FXML private PasswordField txtSenha;
 
-    public LoginController(LoginView view) {
-        this.view = view;
-        configureEvents();
+    public void initialize() {
+        System.out.println("Tela inicial carregada.");
     }
 
-    public LoginController() {
+    @FXML
+    private void bntEntrar(){
+        if (txtUsuario.getText().equals("admin") && txtSenha.getText().equals("123")){
+            System.out.println("Pagina inicial");
+        }
+        try {
+            Main.trocarTela("inicial");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    private void configureEvents() {
-        /*view.getEsquerdaBtn().setOnAction(e -> {
-            System.out.println("Botão da esquerda clicado");
-        });
-
-        view.getDireitaBtn().setOnAction(e -> {
-            System.out.println("Botão da direita clicado");
-        });*/
+    @FXML
+    private void bntCadastro() {
+        try {
+            Main.trocarTela("cadastro");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-
 }

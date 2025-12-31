@@ -17,7 +17,7 @@
          <left>
             <Pane prefHeight="650.0" prefWidth="397.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" layoutX="149.0" layoutY="66.0" prefHeight="50.0" prefWidth="100.0" style="-fx-font-style: orange;" text="Login" textAlignment="CENTER" textFill="ORANGE">
+                  <Label alignment="CENTER" layoutX="149.0" layoutY="66.0" prefHeight="50.0" prefWidth="100.0" text="Login" textAlignment="CENTER" textFill="ORANGE">
                      <font>
                         <Font name="Arial Bold" size="36.0" />
                      </font>
@@ -27,17 +27,46 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="74.0" layoutY="208.0" prefHeight="35.0" prefWidth="250.0" />
+                  <TextField fx:id="txtUsuario"
+                             layoutX="74.0"
+                             layoutY="208.0"
+                             prefHeight="35.0"
+                             prefWidth="250.0"/>
                   <Label layoutX="73.0" layoutY="263.0" prefHeight="30.0" prefWidth="100.0" text="Senha">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                  <PasswordField layoutX="74.0" layoutY="293.0" prefHeight="35.0" prefWidth="250.0" />
-                  <Button layoutX="137.0" layoutY="369.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: orange;" text="Entrar" textFill="WHITE">
+                  <PasswordField fx:id="txtSenha"
+                          layoutX="74.0"
+                          layoutY="293.0"
+                          prefHeight="35.0"
+                          prefWidth="250.0"/>
+
+                  <Button fx:id="btnEntrar"
+                          layoutX="137.0"
+                          layoutY="369.0"
+                          mnemonicParsing="false"
+                          prefHeight="35.0"
+                          prefWidth="130.0"
+                          style="-fx-background-color: orange;"
+                          text="Entrar"
+                          textFill="WHITE"
+                          onAction="#bntEntrar">
                      <font>
                         <Font name="System Bold" size="18.0" />
-                     </font></Button>
-                  <Button layoutX="137.0" layoutY="414.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: orange;" text="Cadastrar" textFill="WHITE">
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCadastrar"
+                          layoutX="137.0"
+                          layoutY="414.0"
+                          mnemonicParsing="false"
+                          prefHeight="35.0"
+                          prefWidth="130.0"
+                          style="-fx-background-color: orange;"
+                          text="Cadastrar"
+                          textFill="WHITE"
+                          onAction="#bntCadastro">
+
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font></Button>
