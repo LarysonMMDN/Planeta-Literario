@@ -5,7 +5,7 @@ import software.infinity.Application.Main;
 
 public class CadastroController {
     public void initialize() {
-        System.out.println("Tela de cadastro carregada.");
+        System.out.println("Tela de Cadastro carregada.");
     }
     @FXML
     private void bntCadastro() {
