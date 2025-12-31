@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software.infinity.Entities.Controller.LoginController">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="900.0">
+         <left>
+            <Pane prefHeight="650.0" prefWidth="397.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagens/miniAstronauta.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="52.0" layoutY="14.0" prefHeight="50.0" prefWidth="300.0" style="-fx-font-style: orange;" text="Novo Cadastro" textAlignment="CENTER" textFill="ORANGE">
+                     <font>
+                        <Font name="Arial Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="152.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagens/iconePerfilPadrão.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="122.0" layoutY="174.0" mnemonicParsing="false" style="-fx-background-color: orange;" text="Selecionar foto de perfil" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField layoutX="74.0" layoutY="210.0" prefHeight="35.0" prefWidth="250.0" promptText="Nome de Exibição" />
+                  <TextField layoutX="74.0" layoutY="255.0" prefHeight="35.0" prefWidth="250.0" promptText="Usuario" />
+                  <PasswordField layoutX="74.0" layoutY="300.0" prefHeight="35.0" prefWidth="250.0" promptText="Senha" />
+                  <PasswordField layoutX="74.0" layoutY="345.0" prefHeight="35.0" prefWidth="250.0" promptText="Confime sua senha" />
+                  <Button layoutX="137.0" layoutY="414.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: orange;" text="Cadastrar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="174.0" layoutY="127.0" prefHeight="70.0" prefWidth="315.0" text="Planeta" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="175.0" layoutY="180.0" prefHeight="70.0" prefWidth="315.0" text="Literário" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="174.0" fitWidth="182.0" layoutX="23.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagens/astronauta.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="126.0" layoutY="302.0" prefHeight="50.0" prefWidth="280.0" text="Seu universo de" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="126.0" layoutY="349.0" prefHeight="50.0" prefWidth="280.0" text="leitura" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
