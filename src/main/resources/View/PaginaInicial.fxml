@@ -3,29 +3,138 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software.infinity.Entities.Controller.PaginaInicialController">
 
     <children>
 
-        <BorderPane fx:id="content" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <BorderPane fx:id="content" layoutY="80.0" prefHeight="520.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0.0">
 
             <top>
                 <BorderPane prefHeight="100.0" style="-fx-background-color: orange;">
-                    <right>
-                        <Button text="Button" BorderPane.alignment="CENTER">
-                     <BorderPane.margin>
-                        <Insets right="30.0" />
-                     </BorderPane.margin></Button>
-                    </right>
 
                     <center>
-                        <Label text="Label" />
+                        <Label prefHeight="100.0" prefWidth="177.0" text="Planeta Literário" textFill="WHITE" wrapText="true">
+                     <graphic>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Imagens/astronauta.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font></Label>
                     </center>
+               <right>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="190.0" BorderPane.alignment="CENTER_RIGHT">
+                     <children>
+
+                         <TextField prefHeight="25.0" prefWidth="175.0" promptText="Pesquisar">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <opaqueInsets>
+                              <Insets right="10.0" />
+                           </opaqueInsets>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </HBox>
+               </right>
+               <left>
+                  <Button fx:id="btnMenuLateral" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: orange;" text="≡" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="10.0" />
+                     </BorderPane.margin>
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Button>
+               </left>
                 </BorderPane>
             </top>
+         <left>
+             <VBox fx:id="menuLateral" managed="false" prefHeight="500.0" prefWidth="220.0" style="-fx-background-color: orange;" visible="false" BorderPane.alignment="CENTER">
+
+                 <!-- Botões superiores -->
+                 <Button fx:id="bntPesquisaAvancada" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Pesquisa Avançada" onAction="#bntPesquisaAvancada">
+                     <VBox.margin>
+                         <Insets bottom="10.0" left="10.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                         <Font name="System Bold" size="12.0" />
+                     </font>
+                 </Button>
+
+                 <Button fx:id="bntLeituraOffline" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Leitura offiline" onAction="#bntLeituraOffiline">
+                     <VBox.margin>
+                         <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                     <font>
+                         <Font name="System Bold" size="12.0" />
+                     </font>
+                 </Button>
+
+                 <Button fx:id="bntConfiguracoes" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Configurações" onAction="#bntConfiguracao">
+                     <VBox.margin>
+                         <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                     <font>
+                         <Font name="System Bold" size="12.0" />
+                     </font>
+                 </Button>
+
+                 <Button fx:id="btnSobre" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Sobre" onAction="#bntSobre">
+                     <VBox.margin>
+                         <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                     <font>
+                         <Font name="System Bold" size="12.0" />
+                     </font>
+                 </Button>
+
+                 <Button fx:id="bntSair" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Sair" onAction="#bntSair">
+                     <VBox.margin>
+                         <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                     <font>
+                         <Font name="System Bold" size="12.0" />
+                     </font>
+                 </Button>
+                 <Pane VBox.vgrow="ALWAYS" />
+
+                 <!-- Rodapé fixo -->
+                 <AnchorPane prefHeight="60.0" prefWidth="220.0">
+                     <children>
+                         <ImageView fx:id="footerImage" fitHeight="60.0" fitWidth="60.0" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+                             <image>
+                                 <Image url="@../Imagens/iconePerfilPadrão.png" />
+                             </image>
+                         </ImageView>
+
+                         <Label fx:id="footerLabel" text="Olá, Literário" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="75.0">
+                             <font>
+                                 <Font name="System Bold" size="16.0" />
+                             </font>
+                         </Label>
+                     </children>
+                 </AnchorPane>
+
+             </VBox>
+
+         </left>
 
         </BorderPane>
 

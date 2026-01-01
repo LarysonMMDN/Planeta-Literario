@@ -33,7 +33,26 @@ public class Main extends Application {
                 fxmlNome = "PaginaInicial.fxml";
                 redimencionamento = true;
                 break;
-
+            case "pesquisa avançada":
+                fxmlNome = "em desenvolvimento";
+                redimencionamento = true;
+                break;
+            case "leitura offline":
+                fxmlNome = "em desenvolvimento";
+                redimencionamento = true;
+                break;
+            case "configurações":
+                fxmlNome = "em desenvolvimento";
+                redimencionamento = true;
+                break;
+            case "sobre":
+                fxmlNome = "em desenvolvimento";
+                redimencionamento = true;
+                break;
+            default:
+                fxmlNome = "PaginaNaoEncontrada.fxml";
+                redimencionamento = true;
+                break;
         }
         Scene cena = View.load(fxmlNome);
         stage.setResizable(redimencionamento);
