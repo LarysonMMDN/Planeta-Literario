@@ -2,6 +2,7 @@ package software.infinity.Application;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import software.infinity.Entities.View.View;
 
@@ -14,6 +15,7 @@ public class Main extends Application {
         stage = primaryStage;
         primaryStage.setTitle("Planeta Literário");
 
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/Imagens/miniAstronauta.png")));
         Scene cena = View.load("Login.fxml");
         stage.setResizable(false);
         primaryStage.setScene(cena);

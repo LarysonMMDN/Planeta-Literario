@@ -11,61 +11,35 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software.infinity.Entities.Controller.LoginController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software.infinity.Entities.Controller.LoginController">
    <children>
-      <BorderPane prefHeight="500.0" prefWidth="900.0">
+      <BorderPane prefHeight="600.0" prefWidth="1000.0">
          <left>
-            <Pane prefHeight="650.0" prefWidth="397.0" BorderPane.alignment="CENTER">
+            <Pane prefHeight="650.0" prefWidth="400.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" layoutX="149.0" layoutY="66.0" prefHeight="50.0" prefWidth="100.0" text="Login" textAlignment="CENTER" textFill="ORANGE">
+                  <Label alignment="CENTER" layoutX="149.0" layoutY="82.0" prefHeight="50.0" prefWidth="100.0" text="Login" textAlignment="CENTER" textFill="ORANGE">
                      <font>
                         <Font name="Arial Bold" size="36.0" />
                      </font>
                   </Label>
-                  <Label layoutX="73.0" layoutY="178.0" prefHeight="30.0" prefWidth="100.0" text="Usuário">
+                  <Label layoutX="63.0" layoutY="200.0" prefHeight="30.0" prefWidth="100.0" text="Usuário">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtUsuario"
-                             layoutX="74.0"
-                             layoutY="208.0"
-                             prefHeight="35.0"
-                             prefWidth="250.0"/>
-                  <Label layoutX="73.0" layoutY="263.0" prefHeight="30.0" prefWidth="100.0" text="Senha">
+                  <TextField fx:id="txtUsuario" layoutX="63.0" layoutY="230.0" prefHeight="35.0" prefWidth="275.0" />
+                  <Label layoutX="63.0" layoutY="275.0" prefHeight="30.0" prefWidth="100.0" text="Senha">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                  <PasswordField fx:id="txtSenha"
-                          layoutX="74.0"
-                          layoutY="293.0"
-                          prefHeight="35.0"
-                          prefWidth="250.0"/>
+                  <PasswordField fx:id="txtSenha" layoutX="63.0" layoutY="305.0" prefHeight="35.0" prefWidth="275.0" />
 
-                  <Button fx:id="btnEntrar"
-                          layoutX="137.0"
-                          layoutY="369.0"
-                          mnemonicParsing="false"
-                          prefHeight="35.0"
-                          prefWidth="130.0"
-                          style="-fx-background-color: orange;"
-                          text="Entrar"
-                          textFill="WHITE"
-                          onAction="#bntEntrar">
+                  <Button fx:id="btnEntrar" layoutX="134.0" layoutY="398.0" mnemonicParsing="false" onAction="#bntEntrar" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: orange;" text="Entrar" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnCadastrar"
-                          layoutX="137.0"
-                          layoutY="414.0"
-                          mnemonicParsing="false"
-                          prefHeight="35.0"
-                          prefWidth="130.0"
-                          style="-fx-background-color: orange;"
-                          text="Cadastrar"
-                          textFill="WHITE"
-                          onAction="#bntCadastro">
+                  <Button fx:id="btnCadastrar" layoutX="134.0" layoutY="448.0" mnemonicParsing="false" onAction="#bntCadastro" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: orange;" text="Cadastrar" textFill="WHITE">
 
                      <font>
                         <Font name="System Bold" size="18.0" />
@@ -74,29 +48,19 @@
             </Pane>
          </left>
          <center>
-            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
+            <Pane prefHeight="600.0" prefWidth="585.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="174.0" layoutY="127.0" prefHeight="70.0" prefWidth="315.0" text="Planeta" textFill="WHITE">
+                  <Label layoutX="244.0" layoutY="147.0" prefHeight="152.0" prefWidth="204.0" text="Planeta Literário" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
-                        <Font name="System Bold" size="48.0" />
+                        <Font name="System Bold" size="50.0" />
                      </font>
                   </Label>
-                  <Label layoutX="175.0" layoutY="180.0" prefHeight="70.0" prefWidth="315.0" text="Literário" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="48.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="174.0" fitWidth="182.0" layoutX="23.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="174.0" fitWidth="182.0" layoutX="71.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Imagens/astronauta.png" />
                      </image>
                   </ImageView>
-                  <Label alignment="CENTER" layoutX="126.0" layoutY="302.0" prefHeight="50.0" prefWidth="280.0" text="Seu universo de" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="36.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="126.0" layoutY="349.0" prefHeight="50.0" prefWidth="280.0" text="leitura" textFill="WHITE">
+                  <Label alignment="CENTER" layoutX="162.0" layoutY="324.0" prefHeight="111.0" prefWidth="280.0" text="Seu universo de Leitura" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
                         <Font name="System Bold" size="36.0" />
                      </font>

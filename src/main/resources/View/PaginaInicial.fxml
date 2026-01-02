@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -69,7 +70,7 @@
              <VBox fx:id="menuLateral" managed="false" prefHeight="500.0" prefWidth="220.0" style="-fx-background-color: orange;" visible="false" BorderPane.alignment="CENTER">
 
                  <!-- Botões superiores -->
-                 <Button fx:id="bntPesquisaAvancada" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Pesquisa Avançada" onAction="#bntPesquisaAvancada">
+                 <Button fx:id="bntPesquisaAvancada" onAction="#bntPesquisaAvancada" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Pesquisa Avançada">
                      <VBox.margin>
                          <Insets bottom="10.0" left="10.0" top="20.0" />
                      </VBox.margin>
@@ -78,7 +79,7 @@
                      </font>
                  </Button>
 
-                 <Button fx:id="bntLeituraOffline" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Leitura offiline" onAction="#bntLeituraOffiline">
+                 <Button fx:id="bntLeituraOffline" onAction="#bntLeituraOffiline" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Leitura offiline">
                      <VBox.margin>
                          <Insets bottom="10.0" left="10.0" />
                      </VBox.margin>
@@ -87,7 +88,7 @@
                      </font>
                  </Button>
 
-                 <Button fx:id="bntConfiguracoes" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Configurações" onAction="#bntConfiguracao">
+                 <Button fx:id="bntConfiguracoes" onAction="#bntConfiguracao" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Configurações">
                      <VBox.margin>
                          <Insets bottom="10.0" left="10.0" />
                      </VBox.margin>
@@ -96,7 +97,7 @@
                      </font>
                  </Button>
 
-                 <Button fx:id="btnSobre" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Sobre" onAction="#bntSobre">
+                 <Button fx:id="btnSobre" onAction="#bntSobre" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Sobre">
                      <VBox.margin>
                          <Insets bottom="10.0" left="10.0" />
                      </VBox.margin>
@@ -105,7 +106,7 @@
                      </font>
                  </Button>
 
-                 <Button fx:id="bntSair" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Sair" onAction="#bntSair">
+                 <Button fx:id="bntSair" onAction="#bntSair" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Sair">
                      <VBox.margin>
                          <Insets bottom="10.0" left="10.0" />
                      </VBox.margin>
@@ -135,6 +136,18 @@
              </VBox>
 
          </left>
+            <center>
+                <ScrollPane fx:id="scroll" BorderPane.alignment="CENTER" fitToWidth="true" fitToHeight="true">
+                    <content>
+                        <AnchorPane fx:id="scrollContent" style="-fx-background-color: gray;">
+                            <children>
+                                <Label layoutX="557.0" layoutY="274.0" text="Teste" textFill="WHITE" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </center>
+
 
         </BorderPane>
 

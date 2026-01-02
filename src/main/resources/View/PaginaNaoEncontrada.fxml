@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -69,7 +70,7 @@
                 <VBox fx:id="menuLateral" managed="false" prefHeight="500.0" prefWidth="220.0" style="-fx-background-color: orange;" visible="false" BorderPane.alignment="CENTER">
 
                     <!-- Botões superiores -->
-                    <Button fx:id="bntPesquisaAvancada" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Pesquisa Avançada" onAction="#bntPesquisaAvancada">
+                    <Button fx:id="bntPesquisaAvancada" onAction="#bntPesquisaAvancada" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Pesquisa Avançada">
                         <VBox.margin>
                             <Insets bottom="10.0" left="10.0" top="20.0" />
                         </VBox.margin>
@@ -78,7 +79,7 @@
                         </font>
                     </Button>
 
-                    <Button fx:id="bntLeituraOffline" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Leitura offiline" onAction="#bntLeituraOffiline">
+                    <Button fx:id="bntLeituraOffline" onAction="#bntLeituraOffiline" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Leitura offiline">
                         <VBox.margin>
                             <Insets bottom="10.0" left="10.0" />
                         </VBox.margin>
@@ -87,7 +88,7 @@
                         </font>
                     </Button>
 
-                    <Button fx:id="bntConfiguracoes" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Configurações" onAction="#bntConfiguracao">
+                    <Button fx:id="bntConfiguracoes" onAction="#bntConfiguracao" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Configurações">
                         <VBox.margin>
                             <Insets bottom="10.0" left="10.0" />
                         </VBox.margin>
@@ -96,7 +97,7 @@
                         </font>
                     </Button>
 
-                    <Button fx:id="btnSobre" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Sobre" onAction="#bntSobre">
+                    <Button fx:id="btnSobre" onAction="#bntSobre" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Sobre">
                         <VBox.margin>
                             <Insets bottom="10.0" left="10.0" />
                         </VBox.margin>
@@ -105,7 +106,7 @@
                         </font>
                     </Button>
 
-                    <Button fx:id="bntSair" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Sair" onAction="#bntSair">
+                    <Button fx:id="bntSair" onAction="#bntSair" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Sair">
                         <VBox.margin>
                             <Insets bottom="10.0" left="10.0" />
                         </VBox.margin>
@@ -135,22 +136,27 @@
                 </VBox>
 
             </left>
-         <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-               <children>
-                  <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="260.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="540.0" AnchorPane.topAnchor="58.0">
-                     <image>
-                        <Image url="@../Imagens/PaginaNaoEncontrada.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="431.0" layoutY="175.0" prefHeight="133.0" prefWidth="212.0" text="Pagina não Encontrada" wrapText="true">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </center>
+            <center>
+                <StackPane alignment="CENTER">
+
+                    <Label prefHeight="110.0" prefWidth="189.0" text="Página não Encontrada" textFill="BLACK" wrapText="true">
+                        <font>
+                            <Font size="36" />
+                        </font>
+                        <StackPane.margin>
+                            <Insets left="250.0" top="75.0" />
+                        </StackPane.margin>
+                    </Label>
+                    
+                    <ImageView fx:id="imgNotFound" fitHeight="250" fitWidth="250.0" preserveRatio="true">
+                        <image>
+                            <Image url="@../Imagens/PaginaNaoEncontrada.png" />
+                        </image>
+                    </ImageView>
+
+                </StackPane>
+            </center>
+
 
         </BorderPane>
 
