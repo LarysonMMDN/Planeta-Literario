@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="root" alignment="TOP_CENTER" prefWidth="160" spacing="6" style="-fx-background-color: orange; -fx-border-color: #D0D0D0; -fx-border-radius: 6; -fx-background-radius: 6;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software.infinity.Entities.Controller.LivroController">
+
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+
+    <!-- Imagem clicável -->
+    <ImageView fx:id="bookImage" fitHeight="180" fitWidth="140" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" />
+    <FlowPane fx:id="booksContainer" hgap="50" prefWrapLength="800" vgap="20" />
+
+
+    <!-- Título do livro -->
+    <Label fx:id="bookTitle" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-alignment: center;" text="Título do Livro" textFill="WHITE" wrapText="true" />
+
+</VBox>

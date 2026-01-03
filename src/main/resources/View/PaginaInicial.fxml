@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -9,6 +10,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -62,6 +64,9 @@
                      <font>
                         <Font name="System Bold" size="36.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </left>
                 </BorderPane>
@@ -70,14 +75,28 @@
              <VBox fx:id="menuLateral" managed="false" prefHeight="500.0" prefWidth="220.0" style="-fx-background-color: orange;" visible="false" BorderPane.alignment="CENTER">
 
                  <!-- Botões superiores -->
-                 <Button fx:id="bntPesquisaAvancada" onAction="#bntPesquisaAvancada" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Pesquisa Avançada">
+                 <Button fx:id="bntPaginaInicial" onAction="#bntOnPaginaInicial" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Pagina inicial">
                      <VBox.margin>
                          <Insets bottom="10.0" left="10.0" top="20.0" />
                      </VBox.margin>
                      <font>
                          <Font name="System Bold" size="12.0" />
                      </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
                  </Button>
+               <Button fx:id="bntPesquisaAvancada" onAction="#bntPesquisaAvancada" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Pesquisa Avançada">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <VBox.margin>
+                     <Insets bottom="10.0" left="10.0" />
+                  </VBox.margin>
+               </Button>
 
                  <Button fx:id="bntLeituraOffline" onAction="#bntLeituraOffiline" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Leitura offiline">
                      <VBox.margin>
@@ -86,6 +105,9 @@
                      <font>
                          <Font name="System Bold" size="12.0" />
                      </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
                  </Button>
 
                  <Button fx:id="bntConfiguracoes" onAction="#bntConfiguracao" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Configurações">
@@ -104,6 +126,9 @@
                      <font>
                          <Font name="System Bold" size="12.0" />
                      </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
                  </Button>
 
                  <Button fx:id="bntSair" onAction="#bntSair" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white;" text="Sair">
@@ -113,6 +138,9 @@
                      <font>
                          <Font name="System Bold" size="12.0" />
                      </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
                  </Button>
                  <Pane VBox.vgrow="ALWAYS" />
 
@@ -137,13 +165,13 @@
 
          </left>
             <center>
-                <ScrollPane fx:id="scroll" BorderPane.alignment="CENTER" fitToWidth="true" fitToHeight="true">
+                <ScrollPane fx:id="scrollPane" fitToHeight="false" fitToWidth="true">
                     <content>
-                        <AnchorPane fx:id="scrollContent" style="-fx-background-color: gray;">
-                            <children>
-                                <Label layoutX="557.0" layoutY="274.0" text="Teste" textFill="WHITE" />
-                            </children>
-                        </AnchorPane>
+                        <FlowPane fx:id="booksContainer" hgap="20" prefWrapLength="800" vgap="20">
+                            <padding>
+                                <Insets bottom="20" left="20" right="20" top="20" />
+                            </padding>
+                        </FlowPane>
                     </content>
                 </ScrollPane>
             </center>

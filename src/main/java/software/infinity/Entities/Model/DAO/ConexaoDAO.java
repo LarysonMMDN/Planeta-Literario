@@ -1,15 +1,19 @@
 package software.infinity.Entities.Model.DAO;
 
 import software.infinity.Entities.Model.BO.EnvConfig;
+import software.infinity.Entities.Model.VO.TabelasVO;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ConexaoDAO {
 
-    private static String URL;
-    private static String USER;
-    private static String PASSWORD;
+    private static final String URL;
+    private static final String USER;
+    private static final String PASSWORD;
+    private static final TabelasVO tabelasVO = new TabelasVO();
 
     static {
         URL = EnvConfig.get("DB_URL");
@@ -26,4 +30,20 @@ public class ConexaoDAO {
         }
     }
 
+    public static void inicializarTabelas() {
+        criarTabela(tabelasVO.getTabelaUsuario());
+        criarTabela(tabelasVO.getTabelaLivro());
+    }
+
+    private static void criarTabela(String sql) {
+        try (Connection conexao = getConnection();
+             PreparedStatement stmt = conexao.prepareStatement(sql)) {
+
+            stmt.executeUpdate();
+            System.out.println("Tabela criada ou já existente.");
+
+        } catch (SQLException e) {
+            System.out.println("Erro ao criar tabela: " + e.getMessage());
+        }
+    }
 }
