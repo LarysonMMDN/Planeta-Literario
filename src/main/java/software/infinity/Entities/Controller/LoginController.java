@@ -1,17 +1,22 @@
 package software.infinity.Entities.Controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import software.infinity.Application.Main;
 
 public class LoginController {
 
     @FXML private TextField txtUsuario;
     @FXML private PasswordField txtSenha;
+    @FXML private Pane telaInicial;
 
     public void initialize() {
-        System.out.println("Tela inicial carregada.");
+        trocarTela("Telas/PaginaLogin.fxml");
+    System.out.println("Tela inicial carregada.");
     }
 
     @FXML
@@ -25,7 +30,16 @@ public class LoginController {
             e.printStackTrace();
         }
     }
-
+    private void trocarTela(String fxml) {
+        try {
+            Parent ator = FXMLLoader.load(
+                    getClass().getResource("/View/" + fxml)
+            );
+            telaInicial.getChildren().setAll(ator);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     private void bntCadastro() {
         try {
