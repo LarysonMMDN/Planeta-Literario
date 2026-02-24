@@ -18,7 +18,7 @@ public class Main extends Application {
         primaryStage.setTitle("Planeta Literário");
         stage.getIcons().add(new Image(getClass().getResourceAsStream("/Imagens/miniAstronauta.png")));
         conexaoDAO.inicializarTabelas();
-        Scene cena = View.load("Login.fxml");
+        Scene cena = View.load("TelaLogin.fxml");
         stage.setResizable(false);
         primaryStage.setScene(cena);
         primaryStage.show();
@@ -27,10 +27,10 @@ public class Main extends Application {
     public static void trocarTela(String fxmlNome) throws Exception {
         boolean redimencionamento = false;
         switch (fxmlNome.toLowerCase()) {
-            case "login" -> fxmlNome = "Login.fxml";
-            case "cadastro" -> fxmlNome = "Cadastro.fxml";
+            case "login" -> fxmlNome = "TelaLogin.fxml";
+            case "cadastro" -> fxmlNome = "PaginaCadastro.fxml";
             case "inicial" -> {
-                fxmlNome = "PaginaInicial.fxml";
+                fxmlNome = "TelaInicial.fxml";
                 redimencionamento = true;
             }
             case "pesquisa avançada", "leitura offline", "configurações", "sobre" -> {

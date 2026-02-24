@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software.infinity.Entities.Controller.PaginaInicialController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software.infinity.Entities.Controller.TelaInicialController">
 
     <children>
 
@@ -30,7 +30,7 @@
                      <graphic>
                         <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Imagens/astronauta.png" />
+                              <Image url="@../../Imagens/astronauta.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -149,7 +149,7 @@
                      <children>
                          <ImageView fx:id="footerImage" fitHeight="60.0" fitWidth="60.0" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
                              <image>
-                                 <Image url="@../Imagens/iconePerfilPadrão.png" />
+                                 <Image url="@../../Imagens/iconePerfilPadrão.png" />
                              </image>
                          </ImageView>
 

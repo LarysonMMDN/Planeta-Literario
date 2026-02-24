@@ -6,14 +6,12 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import software.infinity.Application.Main;
-import software.infinity.Entities.Controller.LivroController;
 import software.infinity.Entities.Model.BO.LivroBO;
 import software.infinity.Entities.Model.VO.LivroVO;
 
-import javax.swing.*;
 import java.util.List;
 
-public class PaginaInicialController {
+public class TelaInicialController {
     @FXML
     private VBox menuLateral;
 
@@ -96,7 +94,7 @@ public class PaginaInicialController {
 
         for (int c = 0; c < livros.size(); c++) {
             LivroVO livro = livros.get(c);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/LivroCard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/Elementos/LivroCard.fxml"));
             VBox card = loader.load();  // Carregue o card do livro
             LivroController controller = loader.getController();
             controller.setLivro(livro);  // Defina o livro para o controller do card
