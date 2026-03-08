@@ -7,6 +7,11 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import software.infinity.Application.Main;
+import software.infinity.Entities.Utils.GerenciadorDePaginas;
+import software.infinity.Entities.Utils.GerenciadorDeTelas;
+
+
+
 
 public class LoginController {
 
@@ -15,8 +20,12 @@ public class LoginController {
     @FXML private Pane telaInicial;
 
     public void initialize() {
-        trocarTela("Telas/PaginaLogin.fxml");
-    System.out.println("Tela inicial carregada.");
+        try {
+            GerenciadorDePaginas.trocarPagina(telaInicial, "PaginaLogin.fxml");
+            System.out.println("Tela inicial carregada.");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -25,25 +34,16 @@ public class LoginController {
             System.out.println("Pagina inicial");
         }
         try {
-            Main.trocarTela("inicial");
+            GerenciadorDeTelas.trocarTela("INICIAL");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    private void trocarTela(String fxml) {
-        try {
-            Parent ator = FXMLLoader.load(
-                    getClass().getResource("/View/" + fxml)
-            );
-            telaInicial.getChildren().setAll(ator);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
     @FXML
     private void bntCadastro() {
         try {
-            Main.trocarTela("cadastro");
+            GerenciadorDePaginas.trocarPagina(telaInicial, "PaginaCadastro.fxml");
         } catch (Exception e) {
             e.printStackTrace();
         }

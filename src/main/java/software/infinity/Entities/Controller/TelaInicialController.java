@@ -8,6 +8,7 @@ import javafx.scene.layout.VBox;
 import software.infinity.Application.Main;
 import software.infinity.Entities.Model.BO.LivroBO;
 import software.infinity.Entities.Model.VO.LivroVO;
+import software.infinity.Entities.Utils.GerenciadorDeTelas;
 
 import java.util.List;
 
@@ -107,37 +108,37 @@ public class TelaInicialController {
 
     @FXML
     private void bntOnPaginaInicial() throws Exception {
-        Main.trocarTela("inicial");
+        GerenciadorDeTelas.trocarTela("inicial");
         TelaAtual = "inicial";
     }
 
     @FXML
     private void bntPesquisaAvancada() throws Exception {
         TelaAtual = "em desenvolvimento";
-        Main.trocarTela("em desenvolvimento");
+        GerenciadorDeTelas.trocarTela("em desenvolvimento");
     }
 
     @FXML
     private void bntLeituraOffiline() throws Exception {
         TelaAtual = "em desenvolvimento";
-        Main.trocarTela("em desenvolvimento");
+        GerenciadorDeTelas.trocarTela("em desenvolvimento");
     }
 
     @FXML
     private void bntConfiguracao() throws Exception {
         TelaAtual = "em desenvolvimento";
-        Main.trocarTela("em desenvolvimento");
+        GerenciadorDeTelas.trocarTela("em desenvolvimento");
     }
 
     @FXML
     private void bntSobre() throws Exception {
         TelaAtual = "em desenvolvimento";
-        Main.trocarTela("em desenvolvimento");
+        GerenciadorDeTelas.trocarTela("em desenvolvimento");
     }
 
     @FXML
     private void bntSair() throws Exception {
         TelaAtual = "login";
-        Main.trocarTela("login");
+        GerenciadorDeTelas.trocarTela("login");
     }
 }

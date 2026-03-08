@@ -2,6 +2,7 @@ package software.infinity.Entities.Controller;
 
 import javafx.fxml.FXML;
 import software.infinity.Application.Main;
+import software.infinity.Entities.Utils.GerenciadorDeTelas;
 
 public class CadastroController {
     public void initialize() {
@@ -10,7 +11,7 @@ public class CadastroController {
     @FXML
     private void bntCadastro() {
         try {
-            Main.trocarTela("Login");
+            GerenciadorDeTelas.trocarTela("Login");
         } catch (Exception e) {
             e.printStackTrace();
         }
